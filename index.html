@@ -9,20 +9,13 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <div class="topbar">
-    <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
-      <span><i class="bi bi-calendar3"></i> Rabu, 08 Juli 2026</span>
-      <div class="d-flex align-items-center gap-3">
-        <a href="#"><i class="bi bi-globe2"></i> Indonesia</a>
-        <a href="kontak.html"><i class="bi bi-telephone"></i> Layanan Data</a>
-      </div>
-    </div>
-  </div>
-
   <nav class="navbar navbar-expand-lg sticky-top main-nav">
     <div class="container">
       <a class="navbar-brand" href="index.html" aria-label="Pusat Data Nusantara">
-        <span class="brand-mark">PDN</span>
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-bars"><span></span><span></span><span></span></span>
+          <span class="brand-line"></span>
+        </span>
         <span>
           <strong>Pusat Data Nusantara</strong>
           <small>Portal Statistik Terpadu</small>
@@ -55,7 +48,7 @@
       <div class="container hero-content">
         <div class="row">
           <div class="col-lg-7">
-            <p class="section-kicker">Data Dummy Untuk Latihan</p>
+            <p class="section-kicker">Ringkasan Berbasis Sumber BPS</p>
             <h1>Portal statistik publik yang rapi, cepat, dan mudah dipindai.</h1>
             <p class="lead">Temukan indikator utama, berita data, publikasi, dan tabel statistik contoh dalam satu tampilan responsif.</p>
             <form class="search-panel site-search" role="search">
@@ -122,6 +115,32 @@
             </article>
           </div>
         </div>
+        <div class="strategic-dashboard mt-4">
+          <aside class="subject-panel">
+            <div class="subject-title"><i class="bi bi-folder-fill"></i> Subjek Statistik</div>
+            <div class="subject-list"></div>
+          </aside>
+          <section class="strategic-main">
+            <div class="strategic-heading">
+              <div>
+                <span class="heading-mark"></span>
+                <i class="bi bi-graph-up-arrow"></i>
+                <h2>Grafik Indikator Strategis</h2>
+              </div>
+              <a href="statistik.html">Data Lengkap <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="strategic-charts">
+              <article class="chart-card">
+                <h3 id="lineChartTitle">Ringkasan Indikator Strategis</h3>
+                <canvas id="strategicLineChart" data-chart="strategic-line" aria-label="Grafik garis indikator strategis" role="img"></canvas>
+              </article>
+              <article class="chart-card">
+                <h3 id="barChartTitle">Komposisi Indikator Strategis</h3>
+                <canvas id="strategicBarChart" data-chart="strategic-bar" aria-label="Grafik batang indikator strategis" role="img"></canvas>
+              </article>
+            </div>
+          </section>
+        </div>
       </div>
     </section>
 
@@ -140,7 +159,7 @@
               <article class="news-item searchable-item" data-title="Ekspor manufaktur tumbuh seiring permintaan regional">
                 <time>08 Jul 2026</time>
                 <h3><a href="berita.html">Ekspor manufaktur tumbuh seiring permintaan regional</a></h3>
-                <p>Rilis dummy menunjukkan peningkatan nilai ekspor pada kelompok barang mesin, tekstil, dan produk olahan.</p>
+                <p>Memuat ringkasan berita dan tautan sumber resmi BPS.</p>
               </article>
               <article class="news-item searchable-item" data-title="Survei biaya hidup perkotaan memasuki tahap pencacahan">
                 <time>06 Jul 2026</time>
@@ -150,7 +169,7 @@
               <article class="news-item searchable-item" data-title="Dashboard kemiskinan daerah diperbarui">
                 <time>02 Jul 2026</time>
                 <h3><a href="berita.html">Dashboard kemiskinan daerah diperbarui</a></h3>
-                <p>Visualisasi dummy kini menampilkan perbandingan kabupaten/kota, tren lima tahun, dan metadata indikator.</p>
+                <p>Memuat ringkasan metadata dan publikasi resmi BPS.</p>
               </article>
             </div>
           </div>
@@ -166,7 +185,7 @@
                 <i class="bi bi-file-earmark-bar-graph"></i>
                 <div>
                   <h3>Statistik Indonesia Dalam Angka 2026</h3>
-                  <p>Kompilasi dummy indikator sosial, ekonomi, pertanian, industri, dan perdagangan.</p>
+                  <p>Memuat ringkasan publikasi resmi dan tautan sumber BPS.</p>
                   <a href="publikasi.html">Unduh contoh <i class="bi bi-download"></i></a>
                 </div>
               </article>
@@ -190,7 +209,7 @@
       <div class="row g-4">
         <div class="col-lg-4">
           <h2>Pusat Data Nusantara</h2>
-          <p>Website latihan dengan konten dummy, dibuat sebagai contoh portal statistik publik.</p>
+          <p>Website latihan berbasis ringkasan dan tautan sumber resmi BPS.</p>
         </div>
         <div class="col-sm-6 col-lg-2">
           <h3>Menu</h3>
@@ -209,7 +228,7 @@
           <p>Jl. Data Raya No. 10, Jakarta<br>layanan@pdn-contoh.id<br>(021) 555-0123</p>
         </div>
       </div>
-      <div class="footer-bottom">© 2026 Pusat Data Nusantara. Konten dummy untuk latihan.</div>
+      <div class="footer-bottom">© 2026 Pusat Data Nusantara. Ringkasan memakai sumber resmi BPS.</div>
     </div>
   </footer>
 

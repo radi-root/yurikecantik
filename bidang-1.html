@@ -1,9 +1,210 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Bidang Perencanaan, Pengendalian dan Evaluasi Pembangunan Daerah"><title>Perencanaan, Pengendalian & Evaluasi | Bapperida Bengkulu</title><link rel="stylesheet" href="assets/style.css"></head><body class="field-one">
-<div class="topbar"><div class="container"><span>Portal Perencanaan Provinsi Bengkulu</span><span>Data berkualitas, pembangunan terarah</span></div></div><header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="assets/logo-bapperida.png" alt="Bapperida Provinsi Bengkulu"></a><button class="menu-btn" aria-label="Buka navigasi" aria-expanded="false">☰</button><nav class="nav"><a href="index.html">Beranda</a><div class="dropdown"><button class="drop-btn">Bidang</button><div class="dropdown-menu"><a href="bidang-1.html"><span class="drop-num">01</span><b>Perencanaan, Pengendalian & Evaluasi</b></a><a href="bidang-2.html"><span class="drop-num">02</span><b>Perekonomian & SDA</b></a><a href="bidang-3.html"><span class="drop-num">03</span><b>Pemerintahan & Pembangunan Manusia</b></a><a href="bidang-4.html"><span class="drop-num">04</span><b>Infrastruktur & Kewilayahan</b></a></div></div><a href="#data">Data</a></nav></div></header>
-<main><section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Beranda</a> / Bidang 1</div><div class="page-title"><div><span class="eyebrow">Bidang 1</span><h1>Perencanaan, Pengendalian dan Evaluasi Pembangunan Daerah</h1><p class="lead">Mengawal keselarasan dokumen perencanaan, pelaksanaan program, dan pencapaian sasaran pembangunan Provinsi Bengkulu.</p></div><div class="page-number">01</div></div></div></section><nav class="section-nav"><div class="container"><a href="#infografis">Infografis</a><a href="#materi">Materi</a><a href="#sintaks">Sintaks R</a><a href="#data">Data Mentah</a></div></nav>
-<section class="section" id="infografis"><div class="container"><div class="section-head"><div><span class="eyebrow">Infografis</span><h2>Dashboard evaluasi pembangunan</h2></div><span class="sample-badge">● Data contoh sementara</span></div><p class="sample-note">Angka pada bidang ini bersifat ilustratif untuk menunjukkan rancangan tampilan dan akan diganti ketika data resmi tersedia.</p><div class="topic-grid reveal"><div class="topic-card"><span>Indikator tercapai</span><strong>35 dari 40</strong><small>87,5% sasaran terpantau</small></div><div class="topic-card"><span>Program prioritas</span><strong>21 dari 24</strong><small>Berjalan sesuai rencana</small></div><div class="topic-card"><span>Ketepatan laporan</span><strong>90,5%</strong><small>38 dari 42 perangkat daerah</small></div></div><div class="panel chart-panel reveal"><h3>Capaian tahapan pengendalian</h3><div class="bar-row"><span class="bar-label">Perencanaan</span><div class="bar-track"><div class="bar green" style="--w:96%"></div></div><span class="bar-value">96%</span></div><div class="bar-row"><span class="bar-label">Pelaksanaan</span><div class="bar-track"><div class="bar green" style="--w:88%"></div></div><span class="bar-value">88%</span></div><div class="bar-row"><span class="bar-label">Pelaporan</span><div class="bar-track"><div class="bar green" style="--w:81%"></div></div><span class="bar-value">81%</span></div><div class="bar-row"><span class="bar-label">Tindak lanjut</span><div class="bar-track"><div class="bar green" style="--w:74%"></div></div><span class="bar-value">74%</span></div></div></div></section>
-<section class="section" id="materi"><div class="container"><div class="section-head"><div><span class="eyebrow">Materi</span><h2>Siklus pembangunan daerah</h2></div></div><div class="split"><article class="content-card reveal"><h3>Perencanaan dan pengendalian</h3><p>Perencanaan menerjemahkan visi daerah menjadi sasaran, indikator, program, dan kegiatan. Pengendalian memastikan pelaksanaan tetap konsisten terhadap target, jadwal, serta anggaran.</p></article><article class="content-card reveal"><h3>Evaluasi pembangunan</h3><p>Evaluasi membandingkan target dengan realisasi, mengenali hambatan, dan menyusun rekomendasi sebagai umpan balik bagi perencanaan periode berikutnya.</p></article></div></div></section>
-<section class="section" id="sintaks"><div class="container"><div class="section-head"><div><span class="eyebrow">Sintaks R</span><h2>Menghitung capaian indikator</h2></div></div><div class="code-wrap reveal"><div class="code-top"><span>evaluasi_pembangunan.R</span><button class="copy-btn">Salin kode</button></div><pre><code><span class="fn">library</span>(dplyr)
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Informasi Bidang Perencanaan, Pengendalian dan Evaluasi Pembangunan Daerah Bapperida Provinsi Bengkulu."
+    />
+    <meta name="theme-color" content="#064b68" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+    <meta
+      property="og:title"
+      content="Perencanaan, Pengendalian dan Evaluasi | Bapperida Bengkulu"
+    />
+    <meta
+      property="og:description"
+      content="Dashboard perencanaan dan evaluasi pembangunan daerah Provinsi Bengkulu."
+    />
+    <meta property="og:image" content="assets/og-bapperida.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Perencanaan, Pengendalian &amp; Evaluasi | Bapperida Bengkulu</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      href="assets/fonts/dm-sans-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/manrope-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body class="field-one">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html"
+          ><img
+            src="assets/logo-bapperida.png"
+            alt="Bapperida Provinsi Bengkulu" /></a
+        ><button
+          type="button"
+          class="menu-btn"
+          aria-label="Buka navigasi"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <nav class="nav" aria-label="Navigasi utama">
+          <a href="index.html">Beranda</a>
+          <div class="dropdown">
+            <button type="button" class="drop-btn">Bidang</button>
+            <div class="dropdown-menu">
+              <a href="bidang-1.html"
+                ><span class="drop-num">01</span
+                ><b>Perencanaan, Pengendalian & Evaluasi</b></a
+              ><a href="bidang-2.html"
+                ><span class="drop-num">02</span><b>Perekonomian & SDA</b></a
+              ><a href="bidang-3.html"
+                ><span class="drop-num">03</span
+                ><b>Pemerintahan & Pembangunan Manusia</b></a
+              ><a href="bidang-4.html"
+                ><span class="drop-num">04</span
+                ><b>Infrastruktur & Kewilayahan</b></a
+              >
+            </div>
+          </div>
+          <a href="#data">Data</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="breadcrumb">
+            <a href="index.html">Beranda</a> / Bidang 1
+          </div>
+          <div class="page-title">
+            <div>
+              <span class="eyebrow">Bidang 1</span>
+              <h1>Perencanaan, Pengendalian dan Evaluasi Pembangunan Daerah</h1>
+              <p class="lead">
+                Mengawal keselarasan dokumen perencanaan, pelaksanaan program,
+                dan pencapaian sasaran pembangunan Provinsi Bengkulu.
+              </p>
+            </div>
+            <div class="page-number">01</div>
+          </div>
+        </div>
+      </section>
+      <nav class="section-nav" aria-label="Navigasi bagian halaman">
+        <div class="container">
+          <a href="#infografis">Infografis</a><a href="#materi">Materi</a
+          ><a href="#sintaks">Sintaks R</a><a href="#data">Data Mentah</a>
+        </div>
+      </nav>
+      <section class="section" id="infografis">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Infografis</span>
+              <h2>Dashboard evaluasi pembangunan</h2>
+            </div>
+            <span class="sample-badge">● Data contoh sementara</span>
+          </div>
+          <p class="sample-note">
+            Angka pada bidang ini bersifat ilustratif untuk menunjukkan
+            rancangan tampilan dan akan diganti ketika data resmi tersedia.
+          </p>
+          <div class="topic-grid reveal">
+            <div class="topic-card">
+              <span>Indikator tercapai</span><strong>35 dari 40</strong
+              ><small>87,5% sasaran terpantau</small>
+            </div>
+            <div class="topic-card">
+              <span>Program prioritas</span><strong>21 dari 24</strong
+              ><small>Berjalan sesuai rencana</small>
+            </div>
+            <div class="topic-card">
+              <span>Ketepatan laporan</span><strong>90,5%</strong
+              ><small>38 dari 42 perangkat daerah</small>
+            </div>
+          </div>
+          <div class="panel chart-panel reveal">
+            <h3>Capaian tahapan pengendalian</h3>
+            <div class="bar-row">
+              <span class="bar-label">Perencanaan</span>
+              <div class="bar-track">
+                <div class="bar green" style="--w: 96%"></div>
+              </div>
+              <span class="bar-value">96%</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Pelaksanaan</span>
+              <div class="bar-track">
+                <div class="bar green" style="--w: 88%"></div>
+              </div>
+              <span class="bar-value">88%</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Pelaporan</span>
+              <div class="bar-track">
+                <div class="bar green" style="--w: 81%"></div>
+              </div>
+              <span class="bar-value">81%</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Tindak lanjut</span>
+              <div class="bar-track">
+                <div class="bar green" style="--w: 74%"></div>
+              </div>
+              <span class="bar-value">74%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="materi">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Materi</span>
+              <h2>Siklus pembangunan daerah</h2>
+            </div>
+          </div>
+          <div class="split">
+            <article class="content-card reveal">
+              <h3>Perencanaan dan pengendalian</h3>
+              <p>
+                Perencanaan menerjemahkan visi daerah menjadi sasaran,
+                indikator, program, dan kegiatan. Pengendalian memastikan
+                pelaksanaan tetap konsisten terhadap target, jadwal, serta
+                anggaran.
+              </p>
+            </article>
+            <article class="content-card reveal">
+              <h3>Evaluasi pembangunan</h3>
+              <p>
+                Evaluasi membandingkan target dengan realisasi, mengenali
+                hambatan, dan menyusun rekomendasi sebagai umpan balik bagi
+                perencanaan periode berikutnya.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="sintaks">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Sintaks R</span>
+              <h2>Menghitung capaian indikator</h2>
+            </div>
+          </div>
+          <div class="code-wrap reveal">
+            <div class="code-top">
+              <span>evaluasi_pembangunan.R</span
+              ><button type="button" class="copy-btn">Salin kode</button>
+            </div>
+            <pre><code><span class="fn">library</span>(dplyr)
 <span class="fn">library</span>(ggplot2)
 
 evaluasi &lt;- <span class="fn">read.csv</span>(<span class="st">"contoh_evaluasi_pembangunan.csv"</span>) |&gt;
@@ -12,6 +213,80 @@ evaluasi &lt;- <span class="fn">read.csv</span>(<span class="st">"contoh_evaluas
 <span class="fn">ggplot</span>(evaluasi, <span class="fn">aes</span>(capaian, reorder(indikator, capaian))) +
   <span class="fn">geom_col</span>(fill = <span class="st">"#3c65ad"</span>) +
   <span class="fn">geom_vline</span>(xintercept = 100, linetype = <span class="st">"dashed"</span>) +
-  <span class="fn">labs</span>(x = <span class="st">"Capaian (%)"</span>, y = NULL) + <span class="fn">theme_minimal</span>()</code></pre></div></div></section>
-<section class="section" id="data"><div class="container"><div class="section-head"><div><span class="eyebrow">Data Mentah</span><h2>Unduh data contoh</h2></div></div><a class="download" href="assets/data/contoh_evaluasi_pembangunan.csv" download><span class="file-icon">CSV</span><span class="download-meta"><strong>contoh_evaluasi_pembangunan.csv</strong><small>Data ilustratif—bukan publikasi resmi</small></span><b>Unduh ↓</b></a></div></section></main>
-<footer class="footer"><div class="footer-wave" aria-hidden="true"></div><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="footer-logo" href="index.html"><img src="assets/logo-bapperida.png" alt="Logo Bapperida Provinsi Bengkulu"></a><p>Badan Perencanaan Pembangunan, Riset dan Inovasi Daerah Provinsi Bengkulu.</p><span class="update-pill">Data contoh sementara</span></div><div><h3>NAVIGASI</h3><a href="index.html">Beranda</a><a href="#infografis">Infografis</a><a href="#materi">Materi</a><a href="#data">Unduh Data</a></div><div><h3>BIDANG</h3><a href="bidang-1.html">Perencanaan & Evaluasi</a><a href="bidang-2.html">Perekonomian & SDA</a><a href="bidang-3.html">Pembangunan Manusia</a><a href="bidang-4.html">Infrastruktur & Wilayah</a></div><div class="footer-contact"><h3>KONTAK RESMI</h3><a href="tel:+6273621502">(0736) 21502</a><a href="mailto:bapperida@bengkuluprov.go.id">bapperida@bengkuluprov.go.id</a><a href="https://bapperida.bengkuluprov.go.id/" target="_blank" rel="noopener">Situs resmi ↗</a><p>Jl. Pembangunan No. 15, Padang Harapan, Kota Bengkulu 38225</p></div></div><div class="footer-bottom"><span>© <span data-year></span> Bapperida Provinsi Bengkulu</span><span>Bidang Perencanaan, Pengendalian dan Evaluasi</span></div></div><a class="back-to-top" href="#" aria-label="Kembali ke bagian atas">↑</a></footer><script src="assets/script.js"></script></body></html>
+  <span class="fn">labs</span>(x = <span class="st">"Capaian (%)"</span>, y = NULL) + <span class="fn">theme_minimal</span>()</code></pre>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="data">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Data Mentah</span>
+              <h2>Unduh data contoh</h2>
+            </div>
+          </div>
+          <a
+            class="download"
+            href="assets/data/contoh_evaluasi_pembangunan.csv"
+            download
+            ><span class="file-icon">CSV</span
+            ><span class="download-meta"
+              ><strong>contoh_evaluasi_pembangunan.csv</strong
+              ><small>Data ilustratif—bukan publikasi resmi</small></span
+            ><b>Unduh ↓</b></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-wave" aria-hidden="true"></div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="footer-logo" href="index.html"
+              ><img
+                src="assets/logo-bapperida.png"
+                alt="Logo Bapperida Provinsi Bengkulu"
+            /></a>
+            <p>
+              Badan Perencanaan Pembangunan, Riset dan Inovasi Daerah Provinsi
+              Bengkulu.
+            </p>
+            <span class="update-pill">Data contoh sementara</span>
+          </div>
+          <div>
+            <h3>NAVIGASI</h3>
+            <a href="index.html">Beranda</a><a href="#infografis">Infografis</a
+            ><a href="#materi">Materi</a><a href="#data">Unduh Data</a>
+          </div>
+          <div>
+            <h3>BIDANG</h3>
+            <a href="bidang-1.html">Perencanaan & Evaluasi</a
+            ><a href="bidang-2.html">Perekonomian & SDA</a
+            ><a href="bidang-3.html">Pembangunan Manusia</a
+            ><a href="bidang-4.html">Infrastruktur & Wilayah</a>
+          </div>
+          <div class="footer-contact">
+            <h3>KONTAK RESMI</h3>
+            <a href="tel:+6273621502">(0736) 21502</a
+            ><a href="mailto:bapperida@bengkuluprov.go.id"
+              >bapperida@bengkuluprov.go.id</a
+            ><a
+              href="https://bapperida.bengkuluprov.go.id/"
+              target="_blank"
+              rel="noopener"
+              >Situs resmi ↗</a
+            >
+            <p>Jl. Pembangunan No. 15, Padang Harapan, Kota Bengkulu 38225</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year></span> Bapperida Provinsi Bengkulu</span
+          ><span>Bidang Perencanaan, Pengendalian dan Evaluasi</span>
+        </div>
+      </div>
+      <a class="back-to-top" href="#" aria-label="Kembali ke bagian atas">↑</a>
+    </footer>
+    <script src="assets/script.js"></script>
+  </body>
+</html>

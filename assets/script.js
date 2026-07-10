@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded',()=>{
   const menu=document.querySelector('.menu-btn'),nav=document.querySelector('.nav');
-  menu?.addEventListener('click',()=>{nav.classList.toggle('open');menu.setAttribute('aria-expanded',nav.classList.contains('open'))});
+  const setMenu=open=>{if(!menu||!nav)return;nav.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Tutup navigasi':'Buka navigasi');menu.textContent=open?'×':'☰'};
+  menu?.addEventListener('click',()=>setMenu(!nav.classList.contains('open')));
   document.querySelector('.drop-btn')?.addEventListener('click',e=>{if(innerWidth<=900)e.currentTarget.parentElement.classList.toggle('open')});
+  nav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{if(innerWidth<=900)setMenu(false)}));
+  document.addEventListener('click',e=>{if(innerWidth<=900&&nav?.classList.contains('open')&&!e.target.closest('.nav-wrap'))setMenu(false)});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){setMenu(false);document.querySelector('.dropdown.open')?.classList.remove('open');menu?.focus()}});
   const page=location.pathname.split('/').pop()||'index.html';
   document.querySelectorAll('.nav a').forEach(a=>{if(a.getAttribute('href')===page)a.classList.add('active')});
   document.querySelectorAll('.copy-btn').forEach(btn=>btn.addEventListener('click',async()=>{const code=btn.closest('.code-wrap').querySelector('code').innerText;await navigator.clipboard.writeText(code);btn.textContent='Tersalin ✓';setTimeout(()=>btn.textContent='Salin kode',1600)}));
